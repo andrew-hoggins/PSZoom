@@ -4,10 +4,13 @@
 List user assistants.
 
 .DESCRIPTION
-List user assistants.
+List a user's assistants. For user-level apps, pass the me value for the -userId parameter.
 
 .PARAMETER UserId
 The user ID or email address.
+
+.LINK
+https://developers.zoom.us/docs/api/rest/reference/user/methods/#operation/userAssistants
 
 .EXAMPLE
 Get-ZoomUserAssistants jmcevoy@lawfirm.com
@@ -34,7 +37,7 @@ function Get-ZoomUserAssistants {
         foreach ($id in $UserId) {
             $Request = [System.UriBuilder]"https://api.$ZoomURI/v2/users/$Id/assistants"
 
-           $response = Invoke-ZoomRestMethod -Uri $request.Uri -Method GET
+            $response = Invoke-ZoomRestMethod -Uri $request.Uri -Method GET
     
             Write-Output $response
         }

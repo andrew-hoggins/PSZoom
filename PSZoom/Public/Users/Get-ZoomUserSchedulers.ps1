@@ -16,7 +16,7 @@ A hastable with the Zoom API response.
 Get-ZoomUserSchedulers jmcevoy@lawfirm.com
 
 .LINK
-https://marketplace.zoom.us/docs/api-reference/zoom-api/users/userschedulers
+https://developers.zoom.us/docs/api/rest/reference/user/methods/#operation/userSchedulers
 
 #>
 

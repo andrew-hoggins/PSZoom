@@ -14,7 +14,7 @@ A hastable with the Zoom API response.
 .EXAMPLE
 Update-ZoomProfilePicture -UserId 'jmcevoy@lawfirm.com' -FileName "C:\Development\Zoom\PSZoom\mcevoy.jpg"
 .LINK
-https://marketplace.zoom.us/docs/api-reference/zoom-api/users/userpicture
+https://developers.zoom.us/docs/api/rest/reference/user/methods/#operation/userPicture
 
 #>
 

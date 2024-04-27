@@ -16,7 +16,7 @@ No output. Can use Passthru switch to pass UserId to output.
 Remove-ZoomUserAssistants jmcevoy@lawfirm.com
 
 .LINK
-https://marketplace.zoom.us/docs/api-reference/zoom-api/users/userassistantsdelete
+https://developers.zoom.us/docs/api/rest/reference/user/methods/#operation/userAssistantsDelete
 
 #>
 

@@ -19,7 +19,7 @@ No output. Can use Passthru switch to pass UserId to output.
 Update-ZoomUserEmail lskywalker@thejedi.com
 
 .LINK
-https://marketplace.zoom.us/docs/api-reference/zoom-api/users/useremailupdate
+https://developers.zoom.us/docs/api/rest/reference/user/methods/#operation/userEmailUpdate
 
 #>
 

@@ -21,7 +21,7 @@ A hastable with the Zoom API response.
 Get-ZoomUserToken jsmith@lawfirm.com
 
 .LINK
-https://marketplace.zoom.us/docs/api-reference/zoom-api/users/usertoken
+https://developers.zoom.us/docs/api/rest/reference/user/methods/#operation/userToken
 
 #>
 

@@ -19,7 +19,7 @@ No output. Can use Passthru switch to pass the UserId as an output.
 Update-ZoomUserPassword -UserId helpdesk@lawfirm.com -Password 'Zoompassword'
 
 .LINK
-https://marketplace.zoom.us/docs/api-reference/zoom-api/users/userpassword
+https://developers.zoom.us/docs/api/rest/reference/user/methods/#operation/userPassword
 
 #>
 

@@ -21,7 +21,7 @@ No output. Can use Passthru switch to pass the UserId as an output.
 Update-ZoomUserStatus -UserId helpdesk@lawfirm.com
 
 .LINK
-https://marketplace.zoom.us/docs/api-reference/zoom-api/users/userstatus
+https://developers.zoom.us/docs/api/rest/reference/user/methods/#operation/userStatus
 
 #>
 

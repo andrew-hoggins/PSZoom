@@ -17,7 +17,7 @@ A hastable with the Zoom API response.
 Get-ZoomUserPermissions jsmith@lawfirm.com
 
 .LINK
-https://marketplace.zoom.us/docs/api-reference/zoom-api/users/userpermission
+https://developers.zoom.us/docs/api/rest/reference/user/methods/#operation/userPermission
 #>
 
 function Get-ZoomUserPermissions {

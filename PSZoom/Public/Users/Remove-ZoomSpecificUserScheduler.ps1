@@ -19,7 +19,7 @@ No output. Can use Passthru switch to pass UserId to output.
 Remove-ZoomSpecificUsersSheduler jmcevoy@lawfirm.com
 
 .LINK
-https://marketplace.zoom.us/docs/api-reference/zoom-api/users/userschedulerdelete
+https://developers.zoom.us/docs/api/rest/reference/user/methods/#operation/userSchedulerDelete
 
 #>
 

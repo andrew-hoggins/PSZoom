@@ -28,7 +28,7 @@ Add assitant to multiple users.
 Add-ZoomUserAssistants -UserId  'okenobi@thejedi.com', 'dsidious@thesith.com' -AssistantId 'dvader@thesith.com',
 
 .LINK
-https://marketplace.zoom.us/docs/api-reference/zoom-api/users/userassistantcreate
+https://developers.zoom.us/docs/api/rest/reference/user/methods/#operation/userAssistantCreate
 
 .OUTPUTS
 A hastable with the Zoom API response.

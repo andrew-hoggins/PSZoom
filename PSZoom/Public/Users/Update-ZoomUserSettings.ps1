@@ -248,7 +248,7 @@ Show international numbers link on the invitation email in Tsp.
 No output. Can use Passthru switch to pass the UserId as an output.
 
 .LINK
-https://marketplace.zoom.us/docs/api-reference/zoom-api/users/usersettingsupdate
+https://developers.zoom.us/docs/api/rest/reference/user/methods/#operation/userSettingsUpdate
 
 .EXAMPLE
 Update-ZoomUserSettings -UserId 'dvader@thesith.com' -JoinBeforeHost $True

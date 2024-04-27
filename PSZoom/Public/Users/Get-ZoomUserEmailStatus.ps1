@@ -13,7 +13,7 @@ The email address to be verified.
 Get-ZoomUserEmailStatus jsmith@lawfirm.com
 
 .LINK
-https://marketplace.zoom.us/docs/api-reference/zoom-api/users/useremail
+https://developers.zoom.us/docs/api/rest/reference/user/methods/#operation/userEmail
 
 .OUTPUTS
 A hastable with the Zoom API response.

@@ -16,7 +16,7 @@ An object with the Zoom API response.
 Get-ZoomPersonalMeetingRoomName 'Joes Room'
 
 .LINK
-https://marketplace.zoom.us/docs/api-reference/zoom-api/users/uservanityname
+https://developers.zoom.us/docs/api/rest/reference/user/methods/#operation/userVanityName
 
 #>
 

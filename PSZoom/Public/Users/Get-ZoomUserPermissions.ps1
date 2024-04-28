@@ -11,7 +11,7 @@ The user ID or email address.
 
 
 .OUTPUTS
-A hastable with the Zoom API response.
+An array of objects.
 
 .EXAMPLE
 Get-ZoomUserPermissions jsmith@lawfirm.com
@@ -30,13 +30,19 @@ function Get-ZoomUserPermissions {
             ValueFromPipelineByPropertyName = $True
         )]
         [Alias('Email', 'EmailAddress', 'Id', 'user_id')]
-        [string]$UserId
+        [string[]]$UserId
      )
 
     process {
-        $Request = [System.UriBuilder]"https://api.$ZoomURI/v2/users/$UserId/permissions"
-        $response = Invoke-ZoomRestMethod -Uri $request.Uri -Method GET
+        $AggregatedResponse = @()
+        $UserId | ForEach-Object {
+            $Request = [System.UriBuilder]"https://api.$ZoomURI/v2/users/$_/permissions"
+            $response = Invoke-ZoomRestMethod -Uri $request.Uri -Method GET 
+            $response | Add-Member -Name 'UserID' -Type NoteProperty -Value $_
+            $AggregatedResponse += $response | Select-Object UserID,permissions
+        }
+        
 
-        Write-Output $response
+        Write-Output $AggregatedResponse
     }
 }

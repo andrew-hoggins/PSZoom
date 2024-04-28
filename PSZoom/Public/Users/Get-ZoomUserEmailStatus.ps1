@@ -16,7 +16,7 @@ Get-ZoomUserEmailStatus jsmith@lawfirm.com
 https://developers.zoom.us/docs/api/rest/reference/user/methods/#operation/userEmail
 
 .OUTPUTS
-A hastable with the Zoom API response.
+A boolean response.
 
 #>
 
@@ -37,7 +37,8 @@ function Get-ZoomUserEmailStatus {
         $query = [System.Web.HttpUtility]::ParseQueryString([String]::Empty)
         $query.Add('email', $Email)
         $Request.Query = $query.ToString()
-        $response = Invoke-ZoomRestMethod -Uri $request.Uri -Method GET
+        $response = Invoke-ZoomRestMethod -Uri $request.Uri -Method GET | Select-Object -ExpandProperty "existed_email"
+        $response = [System.Convert]::ToBoolean($response)
 
         Write-Output $response
     }

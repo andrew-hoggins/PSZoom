@@ -42,7 +42,8 @@ function Get-ZoomPersonalMeetingRoomName {
             $Request.Query = $query.ToString()
         
     
-           $response = Invoke-ZoomRestMethod -Uri $request.Uri -Method GET
+            $response = Invoke-ZoomRestMethod -Uri $request.Uri -Method GET | Select-Object -ExpandProperty "existed"
+            $response = [System.Convert]::ToBoolean($response)
     
             Write-Output $response
         }

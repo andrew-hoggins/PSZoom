@@ -10,7 +10,7 @@ List user schedulers.
 The user ID or email address.
 
 .OUTPUTS
-A hastable with the Zoom API response.
+An array of objects.
 
 .EXAMPLE
 Get-ZoomUserSchedulers jmcevoy@lawfirm.com
@@ -35,7 +35,7 @@ function Get-ZoomUserSchedulers {
 
     process {
         $Request = [System.UriBuilder]"https://api.$ZoomURI/v2/users/$UserId/schedulers"
-        $response = Invoke-ZoomRestMethod -Uri $request.Uri -Method GET
+        $response = Invoke-ZoomRestMethod -Uri $request.Uri -Method GET | Select-Object -ExpandProperty "schedulers"
 
         Write-Output $response
     }

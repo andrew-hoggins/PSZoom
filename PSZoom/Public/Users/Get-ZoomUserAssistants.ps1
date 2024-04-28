@@ -16,7 +16,7 @@ https://developers.zoom.us/docs/api/rest/reference/user/methods/#operation/userA
 Get-ZoomUserAssistants jmcevoy@lawfirm.com
 
 .OUTPUTS
-A hastable with the Zoom API response.
+An array of objects.
 
 #>
 
@@ -37,7 +37,7 @@ function Get-ZoomUserAssistants {
         foreach ($id in $UserId) {
             $Request = [System.UriBuilder]"https://api.$ZoomURI/v2/users/$Id/assistants"
 
-            $response = Invoke-ZoomRestMethod -Uri $request.Uri -Method GET
+            $response = Invoke-ZoomRestMethod -Uri $request.Uri -Method GET | Select-Object -ExpandProperty "assistants"
     
             Write-Output $response
         }

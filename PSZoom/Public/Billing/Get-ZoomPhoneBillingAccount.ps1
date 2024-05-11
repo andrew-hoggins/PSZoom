@@ -36,9 +36,9 @@ Get-ZoomPhoneBillingAccount -PageSize 100 -NextPageToken "8w7vt487wqtb457qwt4"
 
 #>
 
-function Get-ZoomPhoneBillingAccounts {
+function Get-ZoomPhoneBillingAccount {
     [CmdletBinding(DefaultParameterSetName="AllData")]
-    [Alias("Get-ZoomPhoneBillingAccountss")]
+    [Alias("Get-ZoomPhoneBillingAccounts")]
     param (
         [Parameter(
             ParameterSetName="SelectedRecord",
